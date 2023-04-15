@@ -5,4 +5,4 @@ LaTeX template of Thomas Wang resume.
 
 Preview:
 
-![Resume Preview](one_page_resume.png)
+![Resume Preview](one_page_version/one_page_resume.png)
