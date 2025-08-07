@@ -23,12 +23,12 @@
 \usepackage{fancyhdr}
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
+% adjust margins
 \addtolength{\oddsidemargin}{-0.530in}
 \addtolength{\evensidemargin}{-0.375in}
 \addtolength{\textwidth}{1in}
@@ -43,136 +43,143 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
+  \vspace{-9pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
-%-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
+      \textbf{#1}: #2
+  } \vspace{-2pt}
 }
 
 \newcommand{\resumeItemWithoutTitle}[1]{
   \item\small{
-    {\vspace{-2pt}}
-  }
+    #1
+  } \vspace{-2pt}
 }
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textit{#3} & \textit{#4} \\
+      #3 & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheadingOneLine}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
     \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
-
-\renewcommand{\labelitemii}{$\circ$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+\renewcommand{\labelitemi}{\textcolor{black}{\textbullet}}
+\renewcommand{\labelitemii}{\textcolor{black}{$\circ$}}
+
 %-----------------------------
-%%%%%%  CV STARTS HERE  %%%%%%
 
 \begin{document}
 
-%----------HEADING-----------------
+% heading
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{\Huge Thomas Wang}} \\
+  \textbf{\Huge Thomas Wang } \\
   Linkedin: \href{https://www.linkedin.com/in/thomaswang1024}{\underline{https://www.linkedin.com/in/thomaswang1024}} \\
   Github: \href{https://github.com/1am9trash}{\underline{https://github.com/1am9trash}} \\
   Email: \href{mailto:thomaswang1024@gmail.com}{\underline{thomaswang1024@gmail.com}} \\
-  Mobile: +886-911-846-067 \\
+  Mobile: +886-911-846-067
 \end{tabular*}
 
-%-----------EDUCATION-----------------
+% education
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {National Yang Ming Chiao Tung University}{Hsinchu, Taiwan}
-      {Bachelor in Computer Science;  GPA: 4.10/4.3 (Overall), 4.26/4.3 (Major)}{September 2019 - January 2023}
-      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Courses:} 
-      DS and OOP, 
-      Algorithm,
-      Competitive Programming,
-      Database,
-      Operating System,
-      Networking,
-      Artificial Intelligence}}}
+      {B.S. in Computer Science; GPA: 4.10/4.30 (Overall), 4.26/4.30 (Major)}{Sep 2019 – Jan 2023}
+    \resumeItemListStart
+      \resumeItem{Course}{Core Course Scholarship (Top 5\%) in \textbf{DS and OOP}, \textbf{Algorithms}, and \textbf{Computer Organization}}
+      \resumeItem{TA}{University-appointed one-on-one academic tutor for student-athletes in core CS courses}
+    \resumeItemListEnd
     \resumeSubheading
       {National Taiwan University}{Taipei, Taiwan}
-      {Master in Computer Science}{July 2023 - Present}
-    \resumeSubHeadingListEnd
-\vspace{-5pt}
-
-%-----------Awards-----------------
-\section{Awards}
-  \resumeSubHeadingListStart
-    \resumeSubItem{Bronze Prize of The 2020/2021 ICPC Asia Taipei-Hsinchu Site Programming Contest
-}{Served as a representative of the NYCU Programming Challenging Contest Association.}
-    \vspace{0.5pt}
-    \resumeSubItem{Academic Achievements Award in 2019 Fall Semester}{Top 5 \% in the class.}
-    \vspace{0.5pt}
-    \resumeSubItem{2021 Facebook Hacker Cup}{Advanced to round 2 and won the T-shirt.}
-    \vspace{0.5pt}
-    \resumeSubItem{2021 Google KickStart Round G}{5th in Taiwan, 214th in all contestants.}
-    \vspace{0.5pt}
-    \resumeSubItem{2021 Google KickStart Round C}{10th in Taiwan, 318th in all contestants.}
+      {M.S. in Computer Science; ECLab, Advisor: Prof. Chia-Lin Yang}{Sep 2023 - Present}
+    \resumeItemListStart
+      \resumeItem{Course}{\textbf{CUDA Programming}, \textbf{Compiler}, and \textbf{RTOS}}
+      \resumeItem{TA}{Teaching Assistant for \textbf{Computer Architecture} in Fall 2023 and Fall 2024}
+      \resumeItem{Research}{Accelerating Test-Time Compute with a Consumer-grade GPU}
+    \resumeItemListEnd
   \resumeSubHeadingListEnd
 \vspace{-5pt}
 
+% awards
+\section{Competition and Honors}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Academic Achievement Award (Fall 2019)}{Top 5\% of class based on academic performance}
+    \resumeSubItem{ICPC Asia Taipei-Hsinchu Regional Contest (2020, 2021)}{Bronze Medal; represented NYCU}
+    \resumeSubItem{NCPC – National Collegiate Programming Contest (2021)}{Honorable Mention}
+  \resumeSubHeadingListEnd
+\vspace{-5pt}
+
+% experiments
 \section{Experiences}
   \resumeSubHeadingListStart
-    \resumeSubheading{Trading Campaign Team, Appier}{\small Linux, Flask, Kubernete, Jenkins, Helm, CI/CD, DevOps}
-    {Backend Engineer Intern}{March 2022 – July 2022}
-    \begin{itemize}
-    	\setlength\itemsep{0.001em}
-        \item Designed a full-stack platform with automated scripts that streamlined daily routines for users, including both frontend and backend components.
-        \item Proficiently grasped the software development process, utilizing tools such as Git version control.
-    	\item Managed and maintained a Kubernetes cluster, utilizing Docker containers and Jenkins for CI/CD.
-    \end{itemize}    
-    \resumeSubheading{Geocoding Team, Microsoft}{\small C\#, Python, Tensorflow, Bash}
-    {Research and Development Intern}{July 2022 -  December 2022}
-		\begin{itemize}
-            \setlength\itemsep{0.001em}
-            \item Developed a customized NLP model to correct address misspellings within Bing Maps, improving the accuracy of search results.
-            \item Implemented comprehensive optimizations across the model pipeline connected to the live service, resulting in a significant reduction in latency.
-		\end{itemize}
-\resumeSubHeadingListEnd
+    \resumeSubheading
+      {Trading Campaign Team, Appier}{\small Linux, Flask, K8s, Jenkins, Helm}
+      {Backend Engineer Intern}{Mar 2022 – Jun 2022}
+      \resumeItemListStart
+        \resumeItemWithoutTitle{Developed a full-stack automation platform to streamline internal campaign workflows, including both frontend and backend components.}
+      \resumeItemWithoutTitle{Maintained Kubernetes clusters and implemented CI/CD pipelines using Docker, Jenkins, and Helm.}
+      \resumeItemWithoutTitle{Collaborated with cross-functional teams and adopted Git-based workflows in an Agile environment.}
+    \resumeItemListEnd
+  
+    \resumeSubheading
+      {Geocoding Team, Microsoft}{\small Linux, C\#, Python, TensorFlow}
+      {RD Intern}{Jul 2022 – Dec 2022}
+      \resumeItemListStart
+        \resumeItemWithoutTitle{Designed and deployed a custom NLP model to correct misspelled addresses in Bing Maps, enhancing geocoding accuracy and user search relevance.}
+        \resumeItemWithoutTitle{Optimized the end-to-end model pipeline in the live service, reducing latency and improving system responsiveness.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 \vspace{-5pt}
 
-%-----------PROJECTS-----------------
+% projects
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{Raspberry pi OS}{(Work in progress)}
-      \begin{itemize}
-        \setlength\itemsep{0.001em}
-		\item Implemented operating system kernels from scratch on an aarch64 board, demonstrating expertise in low-level systems programming.
-        \item Developed and integrated exception handling and interrupt mechanisms from EL0 to EL3, and designed memory management modules.
-        \item Validated the implementation of the operating system kernels using GDB and QEMU emulator tools to ensure robustness and functionality.
-	 \end{itemize}
-    \vspace{2pt}
-    \resumeSubItem{Credit and grade calculation platform for NYCU student}{(Stop to maintain)}
-      \begin{itemize}
-        \setlength\itemsep{0.001em}
-		\item Built frontend with HTML/CSS, Redux.js and used Firebase as backend for seamless data management.
-	 \end{itemize}
-    \vspace{2pt}
-\resumeSubHeadingListEnd
+    \resumeSubheadingOneLine{Raspberry Pi OS}{\small C, Bare-metal, OS}
+    \resumeItemListStart
+      \resumeItemWithoutTitle{Built an operating system kernel from scratch on the aarch64 board, including linker script, bootloader, UART shell, filesystem, and exception/interrupt handling from EL0 to EL3.}
+      \resumeItemWithoutTitle{Implemented a dynamic memory allocator (startup heap + buddy system).}
+      \resumeItemWithoutTitle{Validated the implementation of the operating system kernels using GDB and QEMU emulator tools.}
+    \resumeItemListEnd
+    
+    \resumeSubheadingOneLine{SDR HDR Converter}{\small Rust}
+    \resumeItemListStart
+      \resumeItemWithoutTitle{Developed a lightweight image converter for HDR/SDR formats.}
+      \resumeItemWithoutTitle{Supported signal transforms (PQ, HLG, Gamma709), color space conversion (Rec.709, Rec.2020), and bit-depth quantization (8-bit, 16-bit).}
+    \resumeItemListEnd
+
+  \resumeSubheadingOneLine{Cuda/ROCm SGEMM Kernel}{\small cuda/ROCm, C++}
+    \resumeItemListStart
+      \resumeItemWithoutTitle{Implemented and progressively optimized SGEMM (single-precision matrix multiplication) kernels from scratch.}
+      \resumeItemWithoutTitle{Applied optimization techniques including global memory coalescing, shared memory tiling, register blocking, and vectorized access to approach cuBLAS-level performance.}
+    \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
 \vspace{-5pt}
 
+% skill
 \section{Skills Summary}
   \resumeSubHeadingListStart
-	\resumeSubItem{Languages}{~~~~~~C, C++, Python, Verilog, SQL, Bash, Assembly}
-	\resumeSubItem{Frameworks}{~~~~Flask, TensorFlow, Keras}
-	\resumeSubItem{Tools}{~~~~~~~~~~~~~~Kubernetes, Docker, Git, Helm, Jenkins, PostgreSQL, MySQL}
-	\resumeSubItem{Platforms}{~~~~~~~Linux, Win, Raspberry}
+	\resumeSubItem{Languages}{~~~~~~C, C++, Python, Rust}
+	\resumeSubItem{Tools}{~~~~~~~~~~~~~~Git, Docker, Shell Script, GDB, K8s, Helm, Jenkins, SQL}
+	\resumeSubItem{Platforms}{~~~~~~~Linux, Win, Cuda/ROCm}
   \resumeSubHeadingListEnd
 
 \end{document}
